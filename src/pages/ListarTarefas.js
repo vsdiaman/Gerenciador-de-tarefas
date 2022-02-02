@@ -49,7 +49,7 @@ function ListarTarefas() {
       obterTarefas();
       setCarregarTarefas(false);
     }
-  }, [carregarTarefas, paginaAtual, ordenarAsc, ordenarDesc]);
+  }, [carregarTarefas, paginaAtual, ordenarAsc, ordenarDesc, filtroTarefa]);
 
   function handleMudarPagina(pagina) {
     setPaginaAtual(pagina);
@@ -107,6 +107,7 @@ function ListarTarefas() {
                 onChange={handleFiltrar}
                 data-testid="txt-tarefa"
                 className="filtro-tarefa"
+                placeholder="Pesquisar por tarefa feita"
               />
             </th>
             <th>&nbsp;</th>
